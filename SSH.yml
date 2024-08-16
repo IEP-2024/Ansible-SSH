@@ -1,0 +1,8 @@
+---
+- hosts: all 
+  become: true 
+  tasks:
+    - include_tasks: tareas/Firewall.yml
+    - include_tasks: tareas/Usuarios.yml
+    - include_tasks: tareas/ConfiguracionSSH.yml
+    #- include_tasks: tareas/ConfiguracionSSH-LineInFile.yml

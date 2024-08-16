@@ -1,0 +1,11 @@
+--- 
+  - name: Copiar configuracion de SSH 
+    copy: 
+      src: configuraciones/sshd_config 
+      dest: /etc/ssh/sshd_config 
+
+  - name: Reiniciar servicio SSH
+    service: 
+      name: sshd 
+      state: restarted
+      enabled: yes
